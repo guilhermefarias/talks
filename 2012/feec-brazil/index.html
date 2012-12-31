@@ -1,0 +1,264 @@
+<!doctype html>  
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Guilherme Farias - Phonegap</title>
+		<meta name="description" content="Phonegap">
+		<meta name="author" content="Guilherme Farias">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+
+	<body>	
+		<div class="reveal">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3 class="inverted">Aplicações Hibridas usando</h3>
+					<h1>Phonegap</h1>
+					<img class="transparent" src="img/phonegap-logo.png" width="300" height="300" />
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+			<!--<section>
+					<h1>Quem sou eu?</h1>
+					<ul>
+						<li class="fragment">Guilherme Farias, 19 anos</li>
+						<li class="fragment">Estudante de Sistemas de Informação</li>
+						<li class="fragment">Front-End Enginner at MGR Tecnologia</li>
+						<li class="fragment">Blogueiro at Guiky</li>
+						<li class="fragment">E mais algumas coisas...</li>
+					</ul>
+			 	</section>-->
+				
+				<section class="bgapp">
+					<h2>Aplicação nativa</h2>
+					<h2>X</h2>
+					<h2>Aplicação hibrida</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>O que é uma aplicação nativa?</h2>
+						<img class="transparent" src="img/native.png" />
+						<!-- C#, Java, Objective-C e etc -->
+					</section>
+					<section>
+						<h2>iOS</h2>
+						<img class="transparent alignright" src="img/iphone.png" />
+						<ul class="fragment middle">
+							<li>Linguagem: Objective-C</li>
+							<li>Ferramenta: X-Code</li>
+							<li>Sistema Operacional: MacOS</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Android</h2>
+						<img class="transparent alignright" src="img/galaxy.png" />
+						<ul class="fragment middle">
+							<li>Linguagem: Java</li>
+							<li>Ferramenta: Eclipse</li>
+							<li>Sistema Operacional:<br/> Linux, MacOS, Windows</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Windows Phone</h2>
+						<img class="transparent alignright" src="img/windowsphone.png" />
+						<ul class="fragment middle">
+							<li>Linguagem: C#</li>
+							<li>Ferramenta: Visual Studio</li>
+							<li>Sistema Operacional: Windows</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>O que é uma aplicação hibrida?</h2>
+						<img class="transparent" src="img/html-css-js.png" />
+						<!-- HTML, CSS e JavaScript -->
+					</section>
+					<section>
+						<h2>Vantagens</h2>
+						<ul>
+							<li class="fragment">Portabilidade</li>
+							<li class="fragment">Produtividade</li>
+							<li class="fragment">Baixo custo</li>
+						</ul>
+						<br/><br/><br/>
+						<h2 class="fragment">Desvantagens</h2>
+						<ul>
+							<li class="fragment">Interface</li>
+							<li class="fragment">Performance</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>O que é o Phonegap?</h2>
+					<img class="transparent" src="img/phonegap-0.png" width="800" height="491" />
+				</section>
+				
+				<section>
+					<h2>Gosta do jQuery? Conheça o Zepto!</h2><br/>
+					<img class="transparent" src="img/zepto.png"  width="800" /><br/><br/>
+					<p class="fragment"><i>If you use jQuery, you already know how to use Zepto.</i></p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Phonegap API</h2>
+						<ul class="alignleft">
+							<li>Acelerômetro</li>
+							<li>Geolocalização</li>
+							<li>Vídeo</li>
+							<li>Áudio</li>
+							<li>Eventos</li>
+							<li>Bússola</li>
+							<li>Contatos</li>
+						</ul>
+						<ul class="alignright">
+							<li>Câmera</li>
+							<li>Arquivos</li>
+							<li>Conexão</li>
+							<li>Armazenamento</li>
+							<li>Dispositivo</li>
+							<li>Globalização</li>
+							<li>Notificação</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Geolocalização API</h2>
+						<pre><code>var onSuccess = function(position) {
+    alert('Latitude: ' + position.coords.latitude +
+          'Longitude: ' + position.coords.longitude +
+          'Altitude: ' + position.coords.altitude +
+          'Precisão: ' + position.coords.accuracy +
+          'Precisão da altitude: ' + position.coords.altitudeAccuracy +
+          'Direção: ' + position.coords.heading +
+          'Velocidade: ' + position.coords.speed +
+          'Timestamp: ' + position.timestamp);
+};
+navigator.geolocation.getCurrentPosition(onSuccess, [onError], 
+                                         [geolocationOptions]);</code></pre>
+					</section>
+					<section>
+						<h2>Câmera API</h2>
+						<pre><code>function onSuccess(imageURI) {
+    var imagem = document.getElementById('minhaImagem');
+    imagem.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Motivo do erro: ' + message);
+}
+
+navigator.camera.getPicture(onSuccess, onFail, { quality: 70, 
+    destinationType: Camera.DestinationType.FILE_URI }); 
+</code></pre>
+					</section>
+
+					<section>
+						<h2>Acelerômetro API</h2>
+						<pre><code>function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x +
+          'Acceleration Y: ' + acceleration.y +
+          'Acceleration Z: ' + acceleration.z +
+          'Timestamp: '      + acceleration.timestamp);
+};
+
+function onError() {
+    alert('fail!');
+};
+
+navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+</code></pre>
+					</section>
+	
+					<section>
+						<h2>Mais informações</h2>
+						<span>http://docs.phonegap.com</span>
+						<img src="img/api.png" width="650" height="395"/>
+					</section>
+				</section>
+				<section>
+					<h2>Obrigado :)</h2><br/><br/>
+					<ul>
+						<li>github.com/guilhermefarias</li>
+						<li>guilhermefarias.com.br</li>
+						<li>twitter.com/guiky</li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script>
+			// Load reveal.js as well as a classList polyfill if needed
+			head.js( !document.body.classList ? 'lib/js/classList.js' : null )
+				.js( 'js/reveal.js', function() {
+
+				// Parse the query string into a key/value object
+				var query = {};
+				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+				} );
+
+				// Fires when a slide with data-state=customevent is activated
+				Reveal.addEventListener( 'customevent', function() {
+					console.log( '"customevent" has fired' );
+				} );
+
+				// Fires each time a new slide is activated
+				Reveal.addEventListener( 'slidechanged', function( event ) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				} );
+
+				// Full list of configuration options available here:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					history: true,
+					
+					theme: query.theme || 'default', // default/neon/beige
+					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+				});
+
+			} );
+			
+			// Load highlight.js for syntax highlighting of code samples
+			head.js( 'lib/js/highlight.js', function() { 
+				hljs.initHighlightingOnLoad(); 
+			} );
+
+			// If we're runnning the notes server we need to include some additional JS
+			// TODO Is there a better way to determine if we're running the notes server?
+			if( window.location.host === 'localhost:1947' ) {
+				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+			}
+		</script>
+	</body>
+</html>
